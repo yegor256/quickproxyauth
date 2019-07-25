@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.6",
   "manifest_version": 2,
   "name": "quickproxyauth",
   "author": "Yegor Bugayenko",
@@ -12,12 +12,16 @@
   "description": "Quick proxy authorization add-on for Firefox",
   "browser_specific_settings": {
     "gecko": {
-      "id": "{098674ef-b309-ef34-6749-98647725ee6b}",
-      "strict_min_version": "52.0"
+      "id": "{098674ef-b309-ef34-6749-98647725ee60}",
+      "strict_min_version": "55.0"
     }
   },
   "permissions": [
-    "<all_urls>"
+    "proxy",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
   ],
   "background": {
     "scripts": ["auth.js"]
