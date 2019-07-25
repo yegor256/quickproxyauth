@@ -8,6 +8,7 @@
     "eslint-config-google": "^0.12.0"
   },
   "scripts": {
+    "zip": "zip -r quickproxyauth.xpi . -x '.git/*' -x 'node_modules/*' -x README.md -x 'package*' -x '*.tgz' -x '.*'",
     "test": "eslint ."
   },
   "license": "MIT"
