@@ -10,13 +10,8 @@ var Ctor = new Components.Constructor(
   'init'
 );
 var info = new Ctor(
-  host,
-  null,
-  'moz-proxy://' + host + ':' + port,
-  login,
-  password,
-  '',
-  ''
+  host, null, 'moz-proxy://' + host + ':' + port,
+  login, password, '', ''
 );
 var manager = Components.classes['@mozilla.org/login-manager;1']
   .getService(Components.interfaces.nsILoginManager);
