@@ -18,6 +18,7 @@
   },
   "permissions": [
     "proxy",
+    "cookie",
     "storage",
     "<all_urls>",
     "webRequest",
