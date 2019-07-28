@@ -32,9 +32,9 @@ You have to inject it via reflection:
 profile.instance_variable_set(:@extensions, { 'quickproxyauth': ext })
 ```
 
-The object `ext` has to implement `write_to(directory)` method and
+The object `ext` has to implement `write_to(dir)` method and
 save the `{098674ef-b309-ef34-6749-98647725ee6b}.xpi`
-file into the provided `directory`:
+file into the provided `dir`:
 
 ```ruby
 ext = Class.new do
