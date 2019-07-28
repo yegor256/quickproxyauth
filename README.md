@@ -3,7 +3,19 @@
 This is a simple add-on for Firefox, which helps with automatic
 proxy authorization in a Selenium/Geckodriver testing.
 
-First, you add `.xpi` file, which you download [here](https://addons.mozilla.org/uk/firefox/addon/quickproxyauth/),
+First, you specify the proxy for the webdriver (it's Ruby):
+
+```ruby
+require 'selenium-webdriver'
+profile = Selenium::WebDriver::Firefox::Profile.new
+profile.proxy = Selenium::WebDriver::Proxy.new(
+  http: "#{host}:#{port}", ssl: "#{host}:#{port}"
+)
+opts = Selenium::WebDriver::Firefox::Options.new(profile: profile)
+driver = Selenium::WebDriver.for(:firefox, options: opts)
+```
+
+Then, you add `.xpi` file, which you download [here](https://addons.mozilla.org/uk/firefox/addon/quickproxyauth/),
 to the `extensions` directory of the profile you start Firefox with.
 You can just `GET` it from
 [this URL](https://addons.mozilla.org/firefox/downloads/file/3367452/quickproxyauth-0.0.13-fx.xpi).
@@ -17,8 +29,6 @@ since it doesn't work with Firefox correctly.
 You have to inject it via reflection:
 
 ```ruby
-require 'selenium-webdriver'
-profile = Selenium::WebDriver::Firefox::Profile.new
 profile.instance_variable_set(:@extensions, { 'quickproxyauth': ext })
 ```
 
