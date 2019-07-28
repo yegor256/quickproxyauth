@@ -23,7 +23,8 @@ Then, you have to inject a cookie into Firefox, before it stars. It's better
 to implement this functionality also inside the `write_to()` method. Firefox
 keeps its cookies in `cookies.sqlite` [SQLite3](https://www.sqlite.org/index.html)
 database in the profile directory. You
-have to create this file before Firefox starts, create a table there and
+have to create this file before Firefox starts, create a new
+[`moz_cookies`](http://kb.mozillazine.org/Cookies.sqlite) table there and
 then `INSERT` a single row into it with `credentials` cookie in the
 `quickproxyauth.com` domain:
 
