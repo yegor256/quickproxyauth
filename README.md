@@ -52,7 +52,7 @@ in both headless and GUI modes.
 
 ## How to contribute
 
-First, you have to install Npm. Then, build it:
+Install [npm](https://www.npmjs.com/) and build it:
 
 ```bash
 $ npm install
