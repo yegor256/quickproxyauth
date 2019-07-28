@@ -1,5 +1,5 @@
 {
-  "version": "0.0.10",
+  "version": "0.0.12",
   "manifest_version": 2,
   "name": "quickproxyauth",
   "author": "Yegor Bugayenko",
@@ -8,6 +8,10 @@
     "url": "https://github.com/yegor256"
   },
   "short_name": "quickproxyauth",
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
   "homepage_url": "https://github.com/quickproxyauth",
   "description": "Quick proxy authorization add-on for Firefox",
   "browser_specific_settings": {
@@ -18,7 +22,7 @@
   },
   "permissions": [
     "proxy",
-    "cookie",
+    "cookies",
     "storage",
     "<all_urls>",
     "webRequest",
