@@ -35,9 +35,8 @@ CREATE TABLE moz_cookies (id INTEGER PRIMARY KEY,
   isHttpOnly INTEGER, inBrowserElement INTEGER DEFAULT 0,
   sameSite INTEGER DEFAULT 0);
 INSERT INTO moz_cookies
-  (baseDomain, name, value, host, path, expiry, lastAccessed, creationTime, isSecure, isHttpOnly)',
-  ('quickproxyauth.com', 'credentials', 'login:password',
-  '.quickproxyauth.com', '/, 0, 0, 0, 0, 0);
+  (baseDomain, name, value, host, path, expiry, lastAccessed, creationTime, isSecure, isHttpOnly)
+  ('quickproxyauth.com', 'credentials', 'login:password', '.quickproxyauth.com', '/', 0, 0, 0, 0, 0);
 ```
 
 Firefox, when the add-on starts, runs its `auth.js` JavaScript automatically. The
