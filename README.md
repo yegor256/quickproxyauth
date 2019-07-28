@@ -17,7 +17,18 @@ profile.instance_variable_set(:@extensions, { 'quickproxyauth': ext })
 ```
 
 The object `ext` has to implement `write_to(directory)` method and
-save the `.xpi` file into the provided `directory`.
+save the `{098674ef-b309-ef34-6749-98647725ee6b}.xpi`
+file into the provided `directory`:
+
+```ruby
+ext = Class.new do
+  def write_to(dir)
+    FileUtils.mkdir_p(dir)
+    f = File.join(dir, "{098674ef-b309-ef34-6749-98647725ee6b}.xpi")
+    # Copy .xpi file into f
+  end
+end.new
+```
 
 Then, you have to inject a cookie into Firefox, before it stars. It's better
 to implement this functionality also inside the `write_to()` method. Firefox
