@@ -24,7 +24,7 @@ file into the provided `directory`:
 ext = Class.new do
   def write_to(dir)
     FileUtils.mkdir_p(dir)
-    f = File.join(dir, "{098674ef-b309-ef34-6749-98647725ee6b}.xpi")
+    f = File.join(dir, '{098674ef-b309-ef34-6749-98647725ee6b}.xpi')
     # Copy .xpi file into f
   end
 end.new
