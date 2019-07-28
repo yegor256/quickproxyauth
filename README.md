@@ -48,11 +48,11 @@ end.new
 
 Then, you have to inject a cookie into Firefox, before it starts. It's better
 to implement this functionality also inside the `write_to()` method. Firefox
-keeps its cookies in `cookies.sqlite` [SQLite3](https://www.sqlite.org/index.html)
+keeps its cookies in the `cookies.sqlite` [SQLite3](https://www.sqlite.org/index.html)
 database in the profile directory. You
 have to create this file before Firefox starts, create a new
-[`moz_cookies`](http://kb.mozillazine.org/Cookies.sqlite) table there and
-then `INSERT` a single row into it with `credentials` cookie in the
+[`moz_cookies`](http://kb.mozillazine.org/Cookies.sqlite) table there, and
+then `INSERT` a single row into it with the `credentials` cookie in the
 `quickproxyauth.com` domain:
 
 ```sql
@@ -67,7 +67,9 @@ INSERT INTO moz_cookies
   ('quickproxyauth.com', 'credentials', 'login:password', '.quickproxyauth.com', '/', 0, 0, 0, 0, 0);
 ```
 
-Firefox, when the add-on starts, runs its `auth.js` JavaScript automatically. The
+Firefox, when the add-on starts, runs its
+[`auth.js`](https://github.com/yegor256/quickproxyauth/blob/master/auth.js)
+JavaScript automatically. The
 script loads the cookie via
 [`cookies.get()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/get)
 and then uses
