@@ -46,7 +46,7 @@ ext = Class.new do
 end.new
 ```
 
-Then, you have to inject a cookie into Firefox, before it stars. It's better
+Then, you have to inject a cookie into Firefox, before it starts. It's better
 to implement this functionality also inside the `write_to()` method. Firefox
 keeps its cookies in `cookies.sqlite` [SQLite3](https://www.sqlite.org/index.html)
 database in the profile directory. You
