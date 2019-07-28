@@ -29,7 +29,7 @@ then `INSERT` a single row into it with `credentials` cookie in the
 
 ```sql
 CREATE TABLE moz_cookies (id INTEGER PRIMARY KEY,
-  baseDomain TEXT, originAttributes TEXT NOT NULL DEFAULT \'\',
+  baseDomain TEXT, originAttributes TEXT NOT NULL DEFAULT '',
   name TEXT, value TEXT, host TEXT, path TEXT, expiry INTEGER,
   lastAccessed INTEGER, creationTime INTEGER, isSecure INTEGER,
   isHttpOnly INTEGER, inBrowserElement INTEGER DEFAULT 0,
