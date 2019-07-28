@@ -19,7 +19,8 @@ save the `.xpi` file into the provided `directory`.
 
 Then, you have to inject a cookie into Firefox, before it stars. It's better
 to implement this functionality also inside the `write_to()` method. Firefox
-keeps its cookies in `cookies.sqlite` database in the profile directory. You
+keeps its cookies in `cookies.sqlite` [SQLite3](https://www.sqlite.org/index.html)
+database in the profile directory. You
 have to create this file before Firefox starts, create a table there and
 then `INSERT` a single row into it with `credentials` cookie in the
 `quickproxyauth.com` domain:
@@ -44,5 +45,7 @@ of the [WebExtensions API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-
 to let the browser know what to do when the
 proxy requires authorization.
 
-Tested with Selenium 3.142.3, Firefox 68.0.1, Geckodriver 0.24.0 on Mac OS and Ubuntu
+Tested with [Selenium](https://github.com/SeleniumHQ/selenium)
+[3.142.3](https://rubygems.org/gems/selenium-webdriver/versions/3.142.3),
+Firefox 68.0.1, Geckodriver 0.24.0 on Mac OS and Ubuntu
 in both headless and GUI modes.
