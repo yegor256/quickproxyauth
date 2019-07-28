@@ -83,4 +83,6 @@ $ npm run zip
 `quickproxyauth.zip` will be created in the root directory. Upload it
 as a new version of the add-on to
 [this page](https://addons.mozilla.org/en-US/developers/addon/quickproxyauth/versions)
-of the Mozilla website.
+of the Mozilla website. Then, you will have an ability to download
+the `.xpi` file from there, after they review the new version and approve it.
+It takes less than an hour.
