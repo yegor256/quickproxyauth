@@ -49,3 +49,17 @@ Tested with [Selenium](https://github.com/SeleniumHQ/selenium)
 [3.142.3](https://rubygems.org/gems/selenium-webdriver/versions/3.142.3),
 Firefox 68.0.1, Geckodriver 0.24.0 on Mac OS and Ubuntu
 in both headless and GUI modes.
+
+## How to contribute
+
+First, you have to install Npm. Then, build it:
+
+```bash
+$ npm install
+$ npm run zip
+```
+
+`quickproxyauth.zip` will be created in the root directory. Upload it
+as a new version of the add-on to
+[this page](https://addons.mozilla.org/en-US/developers/addon/quickproxyauth/versions)
+of the Mozilla website.
