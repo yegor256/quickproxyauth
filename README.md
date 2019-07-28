@@ -39,8 +39,10 @@ INSERT INTO moz_cookies
 ```
 
 Firefox, when the add-on starts, runs its `auth.js` JavaScript automatically. The
-script loads the cookie and then uses
-[webRequest.onAuthRequired](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired)
+script loads the cookie via
+[`cookies.get()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/get)
+and then uses
+[`webRequest.onAuthRequired()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired)
 of the [WebExtensions API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API)
 to let the browser know what to do when the
 proxy requires authorization.
