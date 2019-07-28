@@ -9,7 +9,8 @@ You can just `GET` it from
 [this URL](https://addons.mozilla.org/firefox/downloads/file/3367452/quickproxyauth-0.0.13-fx.xpi).
 
 If the add-on is invisible in Mozilla directory, you can just use this
-file: [quickproxyauth-0.0.13-fx.xpi]().
+file: [`quickproxyauth-0.0.13-fx.xpi`](https://github.com/yegor256/quickproxyauth/raw/master/quickproxyauth-0.0.13-fx.xpi)
+(it is right in this repo).
 
 You can't do it via Ruby [`add_extension`](https://www.rubydoc.info/gems/selenium-webdriver/3.142.3/Selenium/WebDriver/Firefox/Profile),
 since it doesn't work with Firefox correctly.
