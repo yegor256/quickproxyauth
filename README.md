@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/quickproxyauth/master/LICENSE.txt)
+
 This is a simple add-on for Firefox, which helps with automatic
 proxy authorization in a Selenium/Geckodriver testing.
 
