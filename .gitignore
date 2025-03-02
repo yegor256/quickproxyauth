@@ -1,4 +1,6 @@
+*.tgz
+.DS_Store
+.idea/
 node_modules/
 package-lock.json
-*.tgz
 quickproxyauth.xpi
