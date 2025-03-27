@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2019 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
 browser.cookies.get({ url: 'https://quickproxyauth.com', name: 'credentials'}).then(function (cookie) {
   var parts = cookie.value.split(':');
   browser.webRequest.onAuthRequired.addListener(
