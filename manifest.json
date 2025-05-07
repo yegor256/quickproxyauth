@@ -1,26 +1,29 @@
 {
-  "version": "0.0.13",
-  "manifest_version": 2,
-  "name": "quickproxyauth",
   "author": "Yegor Bugayenko",
-  "developer": {
-    "name": "Yegor Bugayenko",
-    "url": "https://github.com/yegor256"
+  "background": {
+    "scripts": [
+      "auth.js"
+    ]
   },
-  "short_name": "quickproxyauth",
-  "icons": {
-    "48": "icon-48.png",
-    "96": "icon-96.png",
-    "256": "icon-256.png"
-  },
-  "homepage_url": "https://github.com/quickproxyauth",
-  "description": "Quick proxy authorization add-on for Firefox",
   "browser_specific_settings": {
     "gecko": {
       "id": "{098674ef-b309-ef34-6749-98647725ee6b}",
       "strict_min_version": "55.0"
     }
   },
+  "description": "Quick proxy authorization add-on for Firefox",
+  "developer": {
+    "name": "Yegor Bugayenko",
+    "url": "https://github.com/yegor256"
+  },
+  "homepage_url": "https://github.com/quickproxyauth",
+  "icons": {
+    "256": "icon-256.png",
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
+  "manifest_version": 2,
+  "name": "quickproxyauth",
   "permissions": [
     "proxy",
     "cookies",
@@ -28,7 +31,6 @@
     "webRequest",
     "webRequestBlocking"
   ],
-  "background": {
-    "scripts": ["auth.js"]
-  }
+  "short_name": "quickproxyauth",
+  "version": "0.0.13"
 }
