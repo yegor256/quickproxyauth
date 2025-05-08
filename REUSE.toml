@@ -4,9 +4,8 @@
 version = 1
 [[annotations]]
 path = [
-    ".eslintrc",
-    "quickproxyauth-0.0.13-fx.xpi",
     ".DS_Store",
+    ".eslintrc",
     ".gitattributes",
     ".gitignore",
     "**.json",
@@ -25,6 +24,7 @@ path = [
     "**/*.txt",
     "**/*.vm",
     "**/CNAME",
+    "quickproxyauth-0.0.13-fx.xpi",
     "README.md",
     "renovate.json",
 ]
